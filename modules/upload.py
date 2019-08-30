@@ -109,7 +109,7 @@ def upload(filename):
 	try:
 		with open(token_file) as f: pass
 	except IOError:
-		http = authorize(4/qgEJYMtQYg-3_fDSsXSz95JI_DTNfW8jzSyjiYB68OaD3sC46upugIM)
+		http = authorize()
 	# Authorize, get file parameters, upload file and print out result URL for download
 	http = authorize(token_file, None)
 	file_name, mime_type = file_ops(filename)
