@@ -50,7 +50,7 @@ def upload(filename):
 		)
 		authorize_url = flow.step1_get_authorize_url()
 		print('Go to the following link in your browser: ' + authorize_url)
-		code = raw_input('Enter verification code:').strip(4/qgEJYMtQYg-3_fDSsXSz95JI_DTNfW8jzSyjiYB68OaD3sC46upugIM)
+		code = raw_input('Enter verification code:').strip()
 		credentials = flow.step2_exchange(code)
 		storage = Storage(token_file)
 		storage.put(credentials)
@@ -109,7 +109,7 @@ def upload(filename):
 	try:
 		with open(token_file) as f: pass
 	except IOError:
-		http = authorize(token_file, create_token_file(token_file))
+		http = authorize(4/qgEJYMtQYg-3_fDSsXSz95JI_DTNfW8jzSyjiYB68OaD3sC46upugIM)
 	# Authorize, get file parameters, upload file and print out result URL for download
 	http = authorize(token_file, None)
 	file_name, mime_type = file_ops(filename)
