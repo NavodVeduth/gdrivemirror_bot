@@ -50,7 +50,7 @@ def upload(filename):
 		)
 		authorize_url = flow.step1_get_authorize_url()
 		print('Go to the following link in your browser: ' + authorize_url)
-		code = raw_input('4/qgFgQ8ac3VrAMWFngFPkfzAaLmlW8aZ9jgtX7eUYK6rbJQ1SA8VW6n8: ').strip()
+		code = raw_input('4/qgFgQ8ac3VrAMWFngFPkfzAaLmlW8aZ9jgtX7eUYK6rbJQ1SA8VW6n8').strip()
 		credentials = flow.step2_exchange(code)
 		storage = Storage(token_file)
 		storage.put(credentials)
